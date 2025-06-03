@@ -9,7 +9,7 @@ load_dotenv()
 DB_HOST = os.getenv("RDS_HOST")              # ex: projet-data-cloud.xxxxxx.eu-west-3.rds.amazonaws.com
 DB_NAME = os.getenv("RDS_NAME")              # ex: projet-data-cloud
 DB_USER = os.getenv("RDS_USER")              # ex: postgres
-DB_PASSWORD = os.getenv("RDS_PASSWORD")      # ton mot de passe
+DB_PASSWORD = os.getenv("RDS_PASSWORD")      
 DB_PORT = 5432
 
 # Connexion à la base RDS PostgreSQL
@@ -23,9 +23,9 @@ try:
     )
     conn.autocommit = True
     cursor = conn.cursor()
-    print("✅ Connexion à la base RDS réussie.")
+    print("Connexion à la base RDS réussie.")
 except Exception as e:
-    print("❌ Connexion échouée :", e)
+    print("Connexion échouée :", e)
     exit()
 
 # Créer la table si elle n'existe pas
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS jobs (
 );
 """
 cursor.execute(create_table_query)
-print("✅ Table 'jobs' vérifiée ou créée.")
+print("Table 'jobs' vérifiée ou créée.")
 
 # Lire le fichier CSV nettoyé
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -68,9 +68,9 @@ for _, row in df.iterrows():
     try:
         cursor.execute(insert_query, values)
     except Exception as e:
-        print("❌ Erreur lors de l'insertion :", e)
+        print("Erreur lors de l'insertion :", e)
 
-print(f"✅ {len(df)} lignes insérées dans la table 'jobs'.")
+print(f"{len(df)} lignes insérées dans la table 'jobs'.")
 
 # Fermer la connexion
 cursor.close()

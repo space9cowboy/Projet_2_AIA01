@@ -8,7 +8,7 @@ load_dotenv()
 APP_ID = os.getenv("ADZUNA_APP_ID")
 APP_KEY = os.getenv("ADZUNA_APP_KEY")
 
-# 💡 Déterminer le chemin absolu vers le dossier data/raw depuis n'importe où
+# Déterminer le chemin absolu vers le dossier data/raw depuis n'importe où
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # racine du projet
 RAW_DATA_PATH = os.path.join(BASE_DIR, "data", "raw")
 os.makedirs(RAW_DATA_PATH, exist_ok=True)
@@ -47,4 +47,4 @@ for result in data.get("results", []):
 output_file = os.path.join(RAW_DATA_PATH, "api_jobs_adzuna.csv")
 df = pd.DataFrame(jobs)
 df.to_csv(output_file, index=False)
-print(f"✅ {len(df)} offres API Adzuna enregistrées dans {output_file}")
+print(f"{len(df)} offres API Adzuna enregistrées dans {output_file}")

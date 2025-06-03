@@ -48,4 +48,4 @@ for offer in offers:
 # Export CSV
 df = pd.DataFrame(jobs)
 df.to_csv("data/raw/aijobs_jobs.csv", index=False)
-print(f"✅ {len(df)} offres extraites et enregistrées dans data/raw/aijobs_jobs.csv")
+print(f"{len(df)} offres extraites et enregistrées dans data/raw/aijobs_jobs.csv")

@@ -60,5 +60,5 @@ combined_df.drop_duplicates(inplace=True)
 # Enregistrer le fichier nettoyé
 output_path = os.path.join(CLEANED_DATA_PATH, "jobs_combined.csv")
 combined_df.to_csv(output_path, index=False)
-print(f"✅ Données nettoyées et fusionnées enregistrées dans : {output_path}")
+print(f"Données nettoyées et fusionnées enregistrées dans : {output_path}")
 print(f"Nombre total d'offres : {len(combined_df)}")
