@@ -1,0 +1,27 @@
+```gitignore
+# Environnement Python
+venv/
+__pycache__/
+*.pyc
+
+# Données sensibles et locales
+.env
+*.sqlite3
+
+# Jupyter & VS Code
+.ipynb_checkpoints/
+.vscode/
+
+# Fichiers CSV volumineux
+/data/raw/*
+/data/cleaned/*
+!/data/raw/.gitkeep
+!/data/cleaned/.gitkeep
+
+# Fichiers de sortie
+*.log
+*.zip
+
+# Cache Streamlit
+.streamlit/
+```

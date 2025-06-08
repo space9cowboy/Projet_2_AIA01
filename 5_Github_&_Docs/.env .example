@@ -1,0 +1,23 @@
+```env
+# Connexion base PostgreSQL (RDS)
+DB_HOST=your-db-host.amazonaws.com
+DB_PORT=5432
+DB_NAME=your_database_name
+DB_USER=your_db_user
+DB_PASSWORD=your_secure_password
+
+# AWS RDS 
+RDS_HOST=your-db-host.amazonaws.com
+RDS_NAME=your_database_name
+RDS_USER=your_db_user
+RDS_PASSWORD=your_secure_password
+
+# AWS S3
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+AWS_REGION=eu-west-3
+S3_BUCKET=your-s3-bucket-name
+
+# ADZUNA API
+ADZUNA_APP_ID=your_adzuna_app_id
+ADZUNA_APP_KEY=your_adzuna_app_key
