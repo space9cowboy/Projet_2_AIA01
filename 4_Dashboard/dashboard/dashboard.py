@@ -8,8 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
-from streamlit_folium import st_folium
-from geopy.geocoders import Nominatim
+
 
 st.set_page_config(page_title="Dashboard Emploi Data Science", layout="wide")
 
@@ -287,6 +286,8 @@ if not df.empty:
 
             **📁 Code source :**  
             - [Lien GitHub du projet](https://github.com/ton-utilisateur/projet-data-cloud)
+            
+            Loïc RABEARIVONY AIA01
             """)
 else:
     st.warning("⚠️ Impossible de charger les données.")
