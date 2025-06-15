@@ -24,7 +24,7 @@ try:
     cursor = conn.cursor()
     print("✅ Connexion à la base RDS réussie.")
 except Exception as e:
-    print("❌ Connexion échouée :", e)
+    print("Connexion échouée :", e)
     exit(1)
 
 # Créer la table avec toutes les colonnes utiles
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS jobs (
 );
 """
 cursor.execute(create_table_query)
-print("📦 Table 'jobs' vérifiée ou créée.")
+print("Table 'jobs' vérifiée ou créée.")
 
 # Lire le fichier CSV nettoyé
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
@@ -53,7 +53,7 @@ csv_path = os.path.join(BASE_DIR, "data", "cleaned", "jobs_combined.csv")
 try:
     df = pd.read_csv(csv_path)
 except FileNotFoundError:
-    print("❌ Fichier introuvable :", csv_path)
+    print("Fichier introuvable :", csv_path)
     cursor.close()
     conn.close()
     exit(1)
@@ -86,9 +86,9 @@ for _, row in df.iterrows():
         cursor.execute(insert_query, values)
         inserted += 1
     except Exception as e:
-        print("⚠️ Erreur lors de l'insertion :", e)
+        print("Erreur lors de l'insertion :", e)
 
-print(f"✅ {inserted} lignes insérées dans la table 'jobs'.")
+print(f"{inserted} lignes insérées dans la table 'jobs'.")
 
 # Fermer la connexion
 cursor.close()
