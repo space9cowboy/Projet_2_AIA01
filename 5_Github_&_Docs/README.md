@@ -74,7 +74,7 @@ streamlit run dashboard/dashboard.py
 
 ## Résultats
 
-- +200 offres analysées (data analyst, scientist, ML engineer…)
+- +1000 offres analysées (data analyst, scientist, ML engineer…)
 - Top villes : Paris, Lyon, Toulouse…
 - Visualisations interactives (barplot, pie chart, boxplot)
 - Données stockées durablement dans le cloud AWS
@@ -84,8 +84,6 @@ streamlit run dashboard/dashboard.py
 ## Perspectives
 
 - Déploiement du dashboard sur Streamlit Cloud
-- Enrichissement via d’autres APIs (LinkedIn, Indeed)
-- Automatisation via Airflow ou AWS Lambda
 
 ---
 

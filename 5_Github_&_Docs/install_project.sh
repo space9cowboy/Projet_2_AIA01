@@ -2,7 +2,7 @@
 
 # === Script d'installation automatique du projet ===
 
-echo "🚀 Initialisation de l'environnement virtuel..."
+echo "Initialisation de l'environnement virtuel..."
 python3 -m venv venv
 source venv/bin/activate
 
