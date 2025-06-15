@@ -12,10 +12,12 @@ Ce document décrit le fonctionnement du **dashboard Streamlit** conçu pour vis
 ---
 
 ## Technologies utilisées
-- **Streamlit** : application web interactive Python
-- **Plotly** : visualisations interactives (barres, secteurs...)
-- **Pandas** : manipulation des données
-- **dotenv** : sécurisation des accès base de données RDS
+- **Streamlit** : interface web interactive en Python
+- **Plotly**  : graphiques dynamiques (bar, pie, line...)
+- **Seaborn & Matplotlib**  : visualisation avancée (boxplot, heatmap...)
+- **Pandas**  : traitement et nettoyage des données
+- **SQLAlchemy + psycopg2**  : connexion à PostgreSQL RDS (AWS)
+- **Dotenv**  : gestion sécurisée des variables d'environnement
 
 ---
 
